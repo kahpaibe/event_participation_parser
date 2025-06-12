@@ -55,7 +55,7 @@ class TVMEventInfo:
             "circles": circle_jsons,
         }
 
-TVMEvents: TypeAlias = dict[int, dict[str, Any]] # {tvm_event_num (int): event_info (TVMEventInfo), ...}
+TVMEvents: TypeAlias = dict[int, dict[str, Any]] # {tvm_event_num (int): event_info_json (dict), ...}
 
 # =========================================================================
 # Processing related definitions
@@ -83,10 +83,13 @@ class TVMCrawler:
                 try:
                     return response.content.decode("utf-8")
                 except Exception as eutf:
-                    LOG(f"WARNING: could not decode {url} ! Dumping html instead")
-                    with open(Path(__file__).with_name(f"{self.decode_error_count}").with_suffix(".htm"), "wb+") as f:
-                        f.write(response.content)
-                    self.decode_error_count += 1
+                    try:
+                        return response.content.decode("euc_jp")
+                    except Exception as eutf:
+                        LOG(f"WARNING: could not decode {url} ! Dumping html instead")
+                        with open(Path(__file__).with_name(f"{self.decode_error_count}").with_suffix(".htm"), "wb+") as f:
+                            f.write(response.content)
+                        self.decode_error_count += 1
         except requests.RequestException as e:
             LOG(f"Failed to fetch {url}: {e}")
 
