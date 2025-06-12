@@ -44,6 +44,8 @@ class VPCircleInfoType1(VPCircleInfoABC): # vopara, vopara2~5
             "name": self.name,
             "pen_name": self.pen_name,
             "position": self.position,
+            "block": self.block,
+            "circle_url": self.circle_url,
         }
 
 @dataclass
@@ -62,6 +64,8 @@ class VPCircleInfoType2(VPCircleInfoABC): # vopara6~...
             "name": self.name,
             "pen_name": self.pen_name,
             "position": self.position,
+            "block": self.block,
+            "circle_url": self.circle_url,
             "main_character": self.main_character,
         }
 
