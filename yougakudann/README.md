@@ -5,61 +5,62 @@ Here are detailled are the sources used for making this database. Any contributi
 # TODO
 * Try "http://web.archive.org/web/20160129115656/http://yougakudan.blogspot.jp/2013/03/blog-post_26.html" with 26 variying, to find list of participant for 4th
 * Verify if 10th was cancelled (reason why 10R)
+* Find participating circles for 1st, 4th, 6th and 10R
 
 ## Sources:
 
 **幺樂団カァニバル！1** (2010.09.05)
 
 - Date: [source](https://shiosyakeyakini.info/touhouEvent/pb_event.php?id=51)
-- Cover: _Missing_ !
+- Cover:[touhoudb](https://touhoudb.com/E/609/yougakudan-carnival-1)
 - Participating circles: _Missing_ !
 
 **幺樂団カァニバル！2** (2011.05.22)
 
 - Date: [source](https://shiosyakeyakini.info/touhouEvent/pb_event.php?id=51)
-- Cover: _Missing_ !
+- Cover:[touhoudb](https://touhoudb.com/E/610/yougakudan-carnival-2)
 - Participating circles: [web.archive.org](http://web.archive.org/web/20110818095504/http://yougakudan.blogspot.com/)
 
 **幺樂団カァニバル！3** (2012.05.06)
 
 - Date: [source](https://shiosyakeyakini.info/touhouEvent/pb_event.php?id=51)
-- Cover: _Missing_ !
+- Cover:[touhoudb](https://touhoudb.com/E/611/yougakudan-carnival-3)
 - Participating circles: [web.archive.org](http://web.archive.org/web/20120930113317/http://yougakudan.blogspot.com/)
 
 **幺樂団カァニバル！4** (2013.04.21)
 
 - Date: [source](https://shiosyakeyakini.info/touhouEvent/pb_event.php?id=51)
-- Cover: _Missing_ !
+- Cover: [touhoudb](https://touhoudb.com/E/612/yougakudan-carnival-4)
 - Participating circles: _Missing_ !
 
 **幺樂団カァニバル！5** (2014.09.14)
 
 - Date: [source](https://shiosyakeyakini.info/touhouEvent/pb_event.php?id=51)
-- Cover: _Missing_ !
+- Cover: [touhoudb](https://touhoudb.com/E/613/yougakudan-carnival-5)
 - Participating circles: [web.archive.org](http://web.archive.org/web/20160129115656/http://yougakudan.blogspot.jp/2013/03/blog-post_26.html)
 
 **幺樂団カァニバル！6** (2016.11.12)
 
 - Date: [source](https://shiosyakeyakini.info/touhouEvent/pb_event.php?id=51)
-- Cover: _Missing_ !
+- Cover: [touhoudb](https://touhoudb.com/E/614/yougakudan-carnival-6)
 - Participating circles: _Missing_ !
 
 **幺樂団カァニバル！7** (2017.11.11)
 
 - Date: [source](https://shiosyakeyakini.info/touhouEvent/pb_event.php?id=51)
-- Cover: _Missing_ !
+- Cover: [touhoudb](https://touhoudb.com/E/615/yougakudan-carnival-7)
 - Participating circles: [web.archive.org](https://web.archive.org/web/20180131034135/http://yougakudan.blogspot.com/)
 
 **幺樂団カァニバル！8** (2018.09.22)
 
 - Date: [source](https://shiosyakeyakini.info/touhouEvent/pb_event.php?id=51)
-- Cover: _Missing_ !
+- Cover: [touhoudb](https://touhoudb.com/E/617/yougakudan-carnival-8)
 - Participating circles: [web.archive.org](https://web.archive.org/web/20181124073957/http://yougakudan.blogspot.com/)
 
 **幺樂団カァニバル！9** (2019.09.22)
 
 - Date: [source](https://shiosyakeyakini.info/touhouEvent/pb_event.php?id=51)
-- Cover: _Missing_ !
+- Cover: [touhoudb](https://touhoudb.com/E/616/yougakudan-carnival-9)
 - Participating circles: _Missing_ !
 
 **幺樂団カァニバル！10** (2020.09.26, cancelled ?) # TODO verify if cancelled (reason why 10R)
