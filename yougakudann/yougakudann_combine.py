@@ -15,6 +15,7 @@ def is_int(txt: str) -> bool:
         return False
 
 if __name__ == "__main__":
+    exit() # Avoid using it
     combined_data: dict[int, Any] = {}
     for json_file in Path(__file__).parent.glob('*.json'):
         if not is_int(json_file.stem):
