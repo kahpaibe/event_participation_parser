@@ -246,21 +246,137 @@ class VPParser:
 # Main execution
 # =========================================================================
 if __name__ == "__main__":
-    urls = ["https://ttc.ninja-web.net/vo-para/vo-para_list.htm"] + [f"https://ttc.ninja-web.net/vo-para/vo-para{num:02d}_list.htm" for num in range(1, 14)]
+    if False: # vo-para main
+        urls = ["https://ttc.ninja-web.net/vo-para/vo-para_list.htm"] + [f"https://ttc.ninja-web.net/vo-para/vo-para{num:02d}_list.htm" for num in range(1, 14)]
+        
+        crawler = VPCrawler()
+        parser = VPParser()
+
+        events: VPEvents = {}
+
+        for url in urls:
+            soup = crawler.fetch(url)
+            if not soup:
+                continue
+            
+            event_info = parser.parse(soup)
+            events[url] = event_info.get_json()
+
+        # with open(Path(__file__).with_name("vopara").with_suffix(".json"), "w+", encoding="utf-8") as f:
+        #     json.dump(events, f, ensure_ascii=False, indent=4)
     
-    crawler = VPCrawler()
-    parser = VPParser()
+    PATH_PAGES = Path(__file__).parent / "pages"
+    if False: # vpk2
+        html_k2 = PATH_PAGES / "kansai2.htm"
+        if html_k2.exists() and True:
+            with open(html_k2, "rb") as f:
+                content = html_k2.read_bytes()
+            soup = BeautifulSoup(content, features="html.parser")
 
-    events: VPEvents = {}
+            circles = []
+            rows = soup.select("tr")
+            for row in rows:
+                cols = row.select("td")
 
-    for url in urls:
-        soup = crawler.fetch(url)
-        if not soup:
-            continue
-        
-        event_info = parser.parse(soup)
-        events[url] = event_info.get_json()
+                if len(cols) == 4:
+                    circles.append({
+                        "name": cols[0].get_text(strip=True),
+                        "pen_name": cols[1].get_text(strip=True),
+                        "circle_url": cols[2].get_text(strip=True),
+                        "position": cols[3].get_text(strip=True),
+                    })
+                else:
+                    print(f"WARNING: Invalid row {row=}")
+                
+            with open(Path(__file__).parent / "k2.json", "w+", encoding="utf-8") as f:
+                json.dump({"VOCALOIDPARADISE関西2": circles}, f, ensure_ascii=False, indent=4)
+                
+    if False: # vpk4
+        html_k4 = PATH_PAGES / "kansai4.htm"
+        if html_k4.exists() and True:
+            with open(html_k4, "rb") as f:
+                content = html_k4.read_bytes()
+            soup = BeautifulSoup(content, features="html.parser")
 
-    with open(Path(__file__).with_name("vopara").with_suffix(".json"), "w+", encoding="utf-8") as f:
-        json.dump(events, f, ensure_ascii=False, indent=4)
-        
+            current_block = ""
+            circles = []
+            rows = soup.select("tr")
+            for row in rows:
+                cols = row.select("td")
+
+
+                if len(cols) == 6:
+                    if cols[1].get_text(strip=True) != "":
+                        current_block = cols[1].get_text(strip=True)
+
+                    circles.append({
+                        "position": f"{current_block}{cols[0].get_text(strip=True)} {cols[5].get_text(strip=True)}",
+                        "name": cols[2].get_text(strip=True),
+                        "pen_name": cols[3].get_text(strip=True),
+                        "circle_url": cols[4].get_text(strip=True),
+                    })
+                else:
+                    print(f"WARNING: Invalid row {row=}")
+                
+            with open(Path(__file__).parent / "k4.json", "w+", encoding="utf-8") as f:
+                json.dump({"VOCALOID PARADISE 関西 4": circles}, f, ensure_ascii=False, indent=4)
+                
+    if False: # vpk5
+        html_k5 = PATH_PAGES / "kansai5.htm"
+        if html_k5.exists() and True:
+            with open(html_k5, "rb") as f:
+                content = html_k5.read_bytes()
+            soup = BeautifulSoup(content, features="html.parser")
+
+            circles = []
+            rows = soup.select("tr")
+            for row in rows:
+                cols = row.select("td")
+
+
+                if len(cols) == 7:
+                    circle_url_tag = row.select_one("a")
+                    if circle_url_tag:
+                        circle_url = circle_url_tag["href"]
+                    else:
+                        circle_url = ""
+
+                    circles.append({
+                        "position": f"{cols[4].get_text(strip=True)}SP数 {cols[0].get_text(strip=True)}",
+                        "name": cols[1].get_text(strip=True),
+                        "pen_name": cols[2].get_text(strip=True),
+                        "circle_url": circle_url,
+                        "genre": cols[6].get_text(strip=True)
+                    })
+                else:
+                    print(f"WARNING: Invalid row {row=}")
+                
+            with open(Path(__file__).parent / "k5.json", "w+", encoding="utf-8") as f:
+                json.dump({"VOCALOID PARADISE 関西 5": circles}, f, ensure_ascii=False, indent=4)
+                
+    if False: # vpk7
+        html_k7 = PATH_PAGES / "kansai7.htm"
+        if html_k7.exists() and True:
+            with open(html_k7, "rb") as f:
+                content = html_k7.read_bytes()
+            soup = BeautifulSoup(content, features="html.parser")
+
+            circles = []
+            rows = soup.select("tr")
+            for row in rows:
+                cols = row.select("td")
+
+
+                if len(cols) == 6:
+                    circles.append({
+                        "position": f"{cols[4].get_text(strip=True)}SP数 {cols[0].get_text(strip=True)}",
+                        "name": cols[1].get_text(strip=True),
+                        "pen_name": cols[2].get_text(strip=True),
+                        "circle_url": cols[3].get_text(strip=True)
+                    })
+                else:
+                    print(f"WARNING: Invalid row {row=}")
+                
+            with open(Path(__file__).parent / "k7.json", "w+", encoding="utf-8") as f:
+                json.dump({"VOCALOID PARADISE 関西 7": circles}, f, ensure_ascii=False, indent=4)
+                
