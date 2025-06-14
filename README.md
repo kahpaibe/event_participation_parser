@@ -4,6 +4,8 @@ An attempt at archiving Japanese doujin-related event info. Current main focus i
 
 Some scripts that helped with formatting data can be found under the respective `helper_scripts` folders.
 
+I have no clear name idea.
+
 ## Content
 
 | Folder                                  | Website (most recent)                                                      |
