@@ -1,17 +1,17 @@
 # epp
 
-A 
+An attempt at archiving Japanese doujin-related event info. 
 
-## Currently archived events
+Some scripts that helped with formatting data can be found under the respective `helper_scripts` folders.
 
-### Full
+## Progress
 
-### Partial
+### Currently archived events
 
 ## Planned
 
 * ようせいげんき！ (source: https://web.archive.org/web/20110811213205/http://www.puniket.com/cirno/cirno_list01.htm)
-
-## License
-
-Project under the MIT License.
+* 幻想人形祭
+* Comiket
+* RTS
+* M3
