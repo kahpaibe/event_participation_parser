@@ -115,9 +115,9 @@ Here are detailled are the sources used for making this database. Any contributi
 - Date: [vo-para.birdzberth.com (archive)](https://web.archive.org/web/20171019042409/http://vo-para.birdzberth.com/)
 - Participating circles: [vo-para.birdzberth.com (archive, incomplete)](https://web.archive.org/web/20210723210530/http://vo-para.birdzberth.com/vpk7_circlelist_1st.html) & [vo-para.birdzberth.com (archive)](https://web.archive.org/web/20190331103830/http://vo-para.birdzberth.com/circle_list.html)
 
-**VOCALOID PARADISE 番外編** ()
+**VOCALOID PARADISE 番外編** (2012.06.24?)
 
-- Date: _Missing_ !
+- Date (likely): [puellabyte.github.io](https://puellabyte.github.io/events)
 - Participating circles: _Missing_ !
 
 **VOCALOID PARADISE 番外編 2** (2013.06.23)
