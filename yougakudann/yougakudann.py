@@ -9,6 +9,41 @@ from bs4 import BeautifulSoup
 PATH_PAGES = Path(__file__).parent / "pages"
 
 if __name__ == "__main__":
+    # ==== process event 01 ====
+    html_1 = PATH_PAGES / "1.htm"
+    if html_1.exists() and True:
+        with open(html_1, "rb") as f:
+            content = html_1.read_bytes()
+        soup = BeautifulSoup(content, features="html.parser")
+
+        current_block = ""
+        circles = []
+        rows = soup.select("tr")
+        for row in rows:
+            cols = row.select("td")
+
+            if len(cols) == 4:
+                if (cols[1].get_text(strip=True) == ""
+                    and cols[2].get_text(strip=True) == ""
+                    and cols[3].get_text(strip=True) == ""
+                    ):
+                    if (cols[0].get_text(strip=True) == ""):
+                        pass
+                    else:
+                        current_block = cols[0].get_text(strip=True)
+                else: # circle
+                    circles.append({
+                        "name": cols[0].get_text(strip=True),
+                        "pen_name": cols[1].get_text(strip=True),
+                        "circle_url": cols[2].get_text(strip=True),
+                        "position": cols[3].get_text(strip=True),
+                        "block": current_block,
+                    })
+            else:
+                print(f"WARNING: Invalid row {row=}")
+            with open(Path(__file__).parent / "1.json", "w+", encoding="utf-8") as f:
+                json.dump({"幺樂団カァニバル!1": circles}, f, ensure_ascii=False, indent=4)
+            
     # ==== process event 02 ====
     html_2 = PATH_PAGES / "2.htm"
     if html_2.exists() and False:
@@ -98,7 +133,7 @@ if __name__ == "__main__":
             
     # ==== process event 08 ====
     html_8 = PATH_PAGES / "8.htm"
-    if html_8.exists() and True:
+    if html_8.exists() and False:
         with open(html_8, "rb") as f:
             content = html_8.read_bytes()
         soup = BeautifulSoup(content, features="html.parser")
