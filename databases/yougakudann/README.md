@@ -64,7 +64,7 @@ Please refer to [MediaSources.md](./media/MediaSources.md) for additionnal detai
 - Date: [source](https://shiosyakeyakini.info/touhouEvent/pb_event.php?id=51)
 - Participating circles: [yougakudan.dojin.com (archive)](https://web.archive.org/web/20200918213738/http://yougakudann.dojin.com/splist.html)
 
-**幺樂団カァニバル！10R** (2021.02.27)
+**幺樂団カァニバル！10R** (2021.02.27 - CANCELLED)
 
 - Date: [source](https://shiosyakeyakini.info/touhouEvent/pb_event.php?id=51)
 - Participating circles: _Missing_ !
